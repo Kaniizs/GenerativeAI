@@ -29,8 +29,8 @@ def predict(img):
     img = PILImage.create(img)
     img.thumbnail((512,512))
     pred,pred_idx,probs = learn.predict(img)
-    if pred == 'cats':
-        return f"This is a cat with probability {probs[pred_idx]:.04f}"
+    if pred == 'bird':
+        return f"This is a bird with probability {probs[pred_idx]:.04f}"
     else:
         return f"This is a dog with probability {probs[pred_idx]:.04f}"
 examples=['Labardor.jpg']
